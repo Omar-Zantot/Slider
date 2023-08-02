@@ -1,0 +1,74 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(199, 78, 100, 0.423);
+}
+img {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fixed-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#parent {
+  width: 70vh;
+  position: relative;
+}
+
+#parent .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.dot {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  transition: all 400ms ease-in-out;
+}
+
+#parent .dots .dot.active {
+  background-color: rgba(199, 78, 100, 0.423);
+  transform: scale(0.9);
+}
+
+#leftBtn,
+#rightBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  transition: all 400ms ease-in-out;
+}
+#leftBtn:hover,
+#rightBtn:hover {
+  font-size: 15px;
+}
+#leftBtn {
+  left: 20px;
+}
+#rightBtn {
+  right: 20px;
+}
